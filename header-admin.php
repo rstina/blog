@@ -29,10 +29,10 @@
           <a class="nav-link" href="../index.php">Hem</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../FEND19-backend-project/admin/index.php">Administrera</a>
+          <a class="nav-link" href="../../blog/admin/index.php">Administrera</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../FEND19-backend-project/admin/create.php">Skapa</a>
+          <a class="nav-link" href="../../blog/admin/create.php">Skapa</a>
         </li>
       </ul>
     </div>

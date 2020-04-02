@@ -30,7 +30,7 @@
           <a class="nav-link" href="index.php">Hem</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../FEND19-backend-project/admin/index.php">Admin</a>
+          <a class="nav-link" href="../blog/admin/index.php">Admin</a>
         </li>
       </ul>
     </div>
