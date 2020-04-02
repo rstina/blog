@@ -1,8 +1,8 @@
 <?php
 /**************************************** *
  * filename: update.php
- * author: Stina Englesson & Jing-Jing Lin
- * date 2020-03-27
+ * author: Stina Englesson
+ * date 2020-04-02
  * 
  * update post in db
 **************************************** */
