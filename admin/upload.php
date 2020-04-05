@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: upload.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * add post to db, show user new post
 **************************************** */
 

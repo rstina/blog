@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: unpublish-update.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * update publish status in db
 **************************************** */
 require_once '../db.php';

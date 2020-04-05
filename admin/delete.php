@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: delete.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * delete blog-post
 **************************************** */
 require_once '../db.php';

@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: publish-update.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * update publish status in db
 **************************************** */
 include_once '../db.php';

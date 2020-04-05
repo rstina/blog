@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: index.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * landing page for admin
 **************************************** */
 

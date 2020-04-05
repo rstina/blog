@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: edit.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * update post info db
 **************************************** */
   require_once '../db.php';
@@ -73,6 +69,14 @@ if(empty($image)){
                     placeholder="Skriv ett inlägg" 
                     value=""><?php echo $content ?></textarea>
     </div>
+        
+    <div class="col-md-12 form-group">
+        <input  name="video" 
+                type="text" 
+                class="form-control" 
+                placeholder="Bädda in video" 
+                value='<?php echo $video ?>'>
+    </div>
 
     <div class="col-md-12 form-group">
         <input  name="map" 
@@ -81,15 +85,6 @@ if(empty($image)){
                 placeholder="Bädda in karta"
                 value='<?php echo $map ?>'>
     </div>   
-        
-    <br>
-    <div class="col-md-12 form-group">
-        <input  name="video" 
-                type="text" 
-                class="form-control" 
-                placeholder="Bädda in video" 
-                value='<?php echo $video ?>'>
-    </div>
     
     <?php echo $addImage; ?>
 

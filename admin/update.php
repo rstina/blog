@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: update.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * update post in db
 **************************************** */
 

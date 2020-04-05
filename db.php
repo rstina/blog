@@ -1,9 +1,5 @@
 <?php 
 /**************************************** *
- * filename: db.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * connect to database and server
 **************************************** */
 

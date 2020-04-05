@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: update-image.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * update image in db to empty
 **************************************** */
 require_once '../db.php';

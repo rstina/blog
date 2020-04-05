@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: read.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * read info from db & display posts
 **************************************** */
 
@@ -31,7 +27,7 @@
       $content_replace_br =  str_replace("\n","<p/><p>",$content);      
 
       if(!empty($video)){
-        $videotext = $video;
+        $videotext = "<iframe width='560' height='315'  src='https://www.youtube.com/embed/$video' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
       } else {
         $videotext = '';
       }
@@ -51,8 +47,8 @@
           <div class='card-body'>
             <h2>$heading</h2>
             <img src='images/$image' class='img-fluid' alt='$image'>
+            $videotext
             <p>$content_replace_br</p>
-            <p>$videotext</p>
             <p>$maptext</p>
             <p>$date</p>
           </div>

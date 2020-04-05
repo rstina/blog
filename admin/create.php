@@ -1,9 +1,5 @@
 <?php
 /**************************************** *
- * filename: update.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
  * create blog-post
 **************************************** */
   require_once '../header-admin.php';
@@ -11,38 +7,27 @@
 
 <h1>Skapa blogginlägg</h1>
 
-<form   action="upload.php"       
-        enctype="multipart/form-data"  
-        method="post" 
-        class="row">
+<form action="upload.php" enctype="multipart/form-data" method="post" class="row">
 
     <div class="col-md-12 form-group">
-        <input name="heading" type="text" required
-        class="form-control" placeholder="Rubrik">
+        <input name="heading" type="text" required class="form-control" placeholder="Rubrik">
     </div>   
       
     <div class="col-md-12 form-group">
-        <textarea name="content" cols="30" rows="5" required
-        class="form-control" placeholder="Skriv ett inlägg"></textarea>
+        <textarea name="content" cols="30" rows="5" required class="form-control" placeholder="Skriv ett inlägg"></textarea>
     </div>
+        
+    <div class="col-md-12 form-group">
+        <input name="video" type="text" class="form-control" placeholder="Ange youtube-video id">
+    </div>  
 
     <div class="col-md-12 form-group">
-        <input name="map" type="text" 
-        class="form-control" placeholder="Bädda in en karta">
+        <input name="map" type="text" class="form-control" placeholder="Bädda in en karta">
     </div>   
-        
-    <br>
-    <div class="col-md-12 form-group">
-        <input name="video" type="text" 
-        class="form-control" placeholder="Bädda in en video">
-    </div>  
             
     <br>
     <div class="col-md-12 form-group">
-        <input  type="file" 
-                name="image" 
-                id="fileToUpload" 
-                class="form-control">
+        <input  type="file" name="image" id="fileToUpload" class="form-control">
     </div>
 
     <div class="col-md-12 form-group">
@@ -53,9 +38,7 @@
     </div>
 
     <div class="col-md-12 form-group">
-        <input  type="submit" 
-                value="Posta inlägget"
-                class="btn btn-success form-control">
+        <input type="submit" value="Posta inlägget" class="btn btn-success form-control">
     </div>
 </form>
 

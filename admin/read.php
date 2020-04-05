@@ -1,15 +1,10 @@
 <?php
 /**************************************** *
- * filename: read.php
- * author: Stina Englesson
- * date 2020-04-02
- * 
- * 
  * read info from db & display posts with editing abilities
 **************************************** */
 
   // koppla till databas
-  require_once 'db.php';
+  require_once '../db.php';
   // förbered SQL-förfrågning
   $stmt = $db->prepare("SELECT * FROM blog ORDER BY date DESC");
   // verkställ
@@ -19,14 +14,14 @@
 
   // loopar över arrayen som har resultatet från db
   while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
-    // spara data från db i varsin variabel
-    $id = htmlspecialchars($row['id']); // $row = array
+    $id = htmlspecialchars($row['id']);
     $heading = htmlspecialchars($row['heading']);
     $image = htmlspecialchars($row['image']);
     $content = htmlspecialchars($row['content']);
     $date = htmlspecialchars($row['date']);
     $map = $row['map'];
     $video = $row['video'];
+    $publish = ($row['publish']);
 
     // replace line break ad p-tag
     $content_replace_br =  str_replace("\n","<p/><p>",$content);
@@ -43,7 +38,6 @@
       $maptext = '';
     }
 
-    $publish = ($row['publish']);
     if( $publish == 'publish' ){
       $publishtext = "Publicerad";
       $unpublish = '<p><a href="unpublish-update.php?id='.$id.'" class="btn btn-sm btn-danger">Avpublicera</a>';
@@ -51,12 +45,7 @@
       $publishtext = "Opublicerad";
       $unpublish = '<a href="publish-update.php?id='.$id.'" class="btn btn-sm btn-success">Publicera</a>';
     }
-    // echo "<pre>";
-    // print_r($row);
-    // echo "</pre>";
 
-      // skriv ut content
-      // OBS! ÄNDRA KARTAN TILL DE SOM HAR DET INLAGT
     echo "<br>
     <div>
       <div class='card'>
@@ -65,8 +54,8 @@
           $unpublish
           <h2>$heading</h2>
           <img src='../images/$image' class='img-fluid' alt='$image'>
-          <p>$content_replace_br</p>
           <p>$videotext</p>
+          <p>$content_replace_br</p>
           <p>$maptext</p>
           <p>$date</p>
           <a href='edit.php?id=$id' class='btn btn-sm btn-info'>Redigera</a>
@@ -81,5 +70,3 @@
 // stäng post div
   echo "</div>";
 ?>
-
-
